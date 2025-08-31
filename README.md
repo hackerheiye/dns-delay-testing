@@ -6,7 +6,7 @@
 
 - 测试指定DNS服务器的响应延迟
 - 支持自定义端口的DNS服务器
-- **支持域名形式的DNS服务器地址**（如：dns.google、xin1145.f3322.org）
+- **支持域名形式的DNS服务器地址**（如：dns.google）
 - 多次测试并计算统计数据（成功率、最小/最大/平均延迟）
 - **端口连接性测试**功能，帮助诊断连接问题
 - **详细的错误分析**，提供具体失败原因和排查建议
@@ -34,7 +34,7 @@ python "dns delay testing.py" --dns <DNS服务器>[:端口] [选项]
 - `--dns`：DNS服务器地址（必需），支持三种格式：
   - IP地址（如：8.8.8.8）
   - 带端口的IP地址（如：8.8.8.8:532）
-  - 域名形式（如：dns.google、xin1145.f3322.org）
+  - 域名形式（如：dns.google.com）
 - `--domain`：测试域名（默认：baidu.com）
 - `--count`：测试次数（默认：5）
 - `--timeout`：超时时间（秒，默认：5）
@@ -47,7 +47,7 @@ python "dns delay testing.py" --dns <DNS服务器>[:端口] [选项]
 python "dns delay testing.py" --dns 8.8.8.8
 
 # 使用域名形式的DNS服务器测试
-python "dns delay testing.py" --dns dns.google
+python "dns delay testing.py" --dns dns.google.com
 
 # 使用指定端口的DNS服务器测试
 python "dns delay testing.py" --dns 8.8.8.8:53 --domain google.com
